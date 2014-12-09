@@ -1,0 +1,65 @@
+/* Empty. Add your own CSS if you like */
+$lambored:                         #FF0102 !default;
+$hamburger-color:                  #666666 !default;
+
+body {
+    background-color: white;
+    font-family: 'bebas_neueregular';
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'bebas_neueregular';
+    font-size:48px;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+.button-full {
+    border:none;
+    background-color: background: #e8e8e8; /* Old browsers */
+background: -moz-linear-gradient(top,  #e8e8e8 0%, #a2a4a7 12%, #e1e1e1 29%, #c3c5c7 64%, #dadbdc 80%, #939598 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(12%,#a2a4a7), color-stop(29%,#e1e1e1), color-stop(64%,#c3c5c7), color-stop(80%,#dadbdc), color-stop(100%,#939598)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e8e8e8 0%,#a2a4a7 12%,#e1e1e1 29%,#c3c5c7 64%,#dadbdc 80%,#939598 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e8e8e8 0%,#a2a4a7 12%,#e1e1e1 29%,#c3c5c7 64%,#dadbdc 80%,#939598 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e8e8e8 0%,#a2a4a7 12%,#e1e1e1 29%,#c3c5c7 64%,#dadbdc 80%,#939598 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e8e8e8 0%,#a2a4a7 12%,#e1e1e1 29%,#c3c5c7 64%,#dadbdc 80%,#939598 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#939598',GradientType=0 ); /* IE6-9 */ !important;
+}
+
+.button-positive {
+    font-family: 'bebas_neueregular';
+    color:black !important;
+    font-size:2.5em;
+}
+
+
+
+/* Google Maps CSS */
+
+
+
+.ui-header .ui-title,
+.ui-footer .ui-title,
+.ui-btn-inner *
+{
+   white-space: normal !important;
+}
+
+.photo
+{
+   display: block;
+   margin: 0px auto;
+}
+
+dl.informations dt
+{
+   font-weight: bold;
+}
+
+#map
+{
+   width: 100%;
+   height: 600px;
+}
