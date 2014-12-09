@@ -5,6 +5,7 @@ $hamburger-color:                  #666666 !default;
 body {
     background-color: white;
     font-family: 'bebas_neueregular';
+    padding-bottom:50px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'bebas_neueregular';
@@ -14,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration:none;
     color:black;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 .button-full {
