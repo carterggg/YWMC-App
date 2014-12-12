@@ -35,12 +35,11 @@ angular.module('starter.controllers', [])
 
  .controller('PlaylistsCtrl', function($scope) {
 /* $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'SETTINGS', id: 1 },
+    { title: 'MAP MODE', id: 2 },
+    { title: 'UNITS', id: 3 },
+    { title: 'GPS SETTINGS', id: 4 },
+    { title: 'REMOVE ADS', id: 5 }
   ]; */
 }) 
 

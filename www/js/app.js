@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+var example = angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -69,4 +69,61 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
+
+
+
+example.controller('MapController', function($scope, $ionicLoading) {
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+ 
+    google.maps.event.addDomListener(window, 'load', function() {
+      
+        directionsDisplay = new google.maps.DirectionsRenderer();
+  var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
+  var mapOptions = {
+    zoom:16,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+ 
+  directionsDisplay.setMap(map);
+    
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+ 
+      navigator.geolocation.getCurrentPosition(function(pos) {
+         map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+         var myLocation = new google.maps.Marker({
+             position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+             map: map,
+             title: "My Location"
+         });
+      });
+ 
+        $scope.map = map;
+      
+  
+    });
+ 
+});
+
+
+
+function calcRoute() {
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode.WALKING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+
+
 
